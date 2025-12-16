@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elegant Flora Boutique",
-  description: "Beautiful AI-powered website creation platform",
+  title: "Décor CRM - Rental Management System",
+  description: "AI-powered CRM for décor rental companies. Manage inventory, bookings, clients, and payments with real-time tracking.",
 };
 
 export default function RootLayout({

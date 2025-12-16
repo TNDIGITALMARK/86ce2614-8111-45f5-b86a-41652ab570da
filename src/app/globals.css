@@ -1,97 +1,124 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* ============================================
+   LUXURY DÉCOR RENTAL CRM DESIGN SYSTEM
+   Deep Navy Primary | Crisp White | Gold Accents
+   ============================================ */
 
 :root {
-  /* Pure white background with crisp black text */
-  --background: 0 0% 100%;
-  --foreground: 0 0% 0%;
+  /* Font System */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
-  /* Clean white cards with black text */
-  --card: 0 0% 100%;
-  --card-foreground: 0 0% 0%;
+  /* Core Backgrounds - Deep Navy Primary with Crisp White Content */
+  --background: 210 100% 98%;        /* Very light blue-gray for main background */
+  --foreground: 220 40% 15%;         /* Deep navy text */
 
-  /* Popovers with white background */
+  /* Cards - Crisp White Content Areas */
+  --card: 0 0% 100%;                 /* Pure white cards */
+  --card-foreground: 220 40% 15%;    /* Deep navy text on cards */
+
+  /* Popovers */
   --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 0%;
+  --popover-foreground: 220 40% 15%;
 
-  /* Primary: Black with white text */
-  --primary: 0 0% 0%;
-  --primary-foreground: 0 0% 100%;
+  /* Primary - Deep Navy (Professional Luxury) */
+  --primary: 220 50% 20%;            /* Deep navy for primary actions */
+  --primary-foreground: 0 0% 100%;   /* White text on navy */
 
-  /* Secondary: Light gray background with black text */
-  --secondary: 0 0% 97%;
-  --secondary-foreground: 0 0% 0%;
+  /* Secondary - Soft Navy Background */
+  --secondary: 220 30% 95%;          /* Light navy background */
+  --secondary-foreground: 220 40% 15%; /* Deep navy text */
 
-  /* Muted: Subtle gray with darker text */
-  --muted: 0 0% 96%;
-  --muted-foreground: 0 0% 40%;
+  /* Muted - Subtle Gray Tones */
+  --muted: 220 20% 94%;
+  --muted-foreground: 220 15% 45%;
 
-  /* Accent: Light gray */
-  --accent: 0 0% 96%;
-  --accent-foreground: 0 0% 0%;
+  /* Accent - Gold Luxury Highlights */
+  --accent: 45 100% 50%;             /* Vibrant gold for accents */
+  --accent-foreground: 220 40% 15%;  /* Dark navy text on gold */
 
-  /* Destructive: Clean red */
-  --destructive: 0 70% 50%;
+  /* Gold Variations for Luxury Details */
+  --gold-light: 45 100% 70%;         /* Light gold for hover states */
+  --gold-dark: 45 100% 40%;          /* Dark gold for active states */
+
+  /* Success, Warning, Destructive */
+  --success: 145 65% 45%;            /* Professional green */
+  --success-foreground: 0 0% 100%;
+
+  --warning: 35 100% 50%;            /* Amber warning */
+  --warning-foreground: 220 40% 15%;
+
+  --destructive: 0 70% 50%;          /* Clean red */
   --destructive-foreground: 0 0% 100%;
 
-  /* Borders: Subtle gray */
-  --border: 0 0% 90%;
-  --input: 0 0% 90%;
-  --ring: 0 0% 0%;
+  /* Borders & Inputs */
+  --border: 220 20% 88%;             /* Soft navy-tinted borders */
+  --input: 220 20% 92%;              /* Light input backgrounds */
+  --ring: 45 100% 50%;               /* Gold focus ring */
 
-  /* Minimal rounded corners */
-  --radius: 0.375rem;
+  /* Rounded Corners - Sophisticated */
+  --radius: 0.5rem;
 
-  /* Sidebar: Clean white with black text */
-  --sidebar-background: 0 0% 100%;
-  --sidebar-foreground: 0 0% 0%;
-  --sidebar-primary: 0 0% 0%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 0 0% 96%;
-  --sidebar-accent-foreground: 0 0% 0%;
-  --sidebar-border: 0 0% 90%;
-  --sidebar-ring: 0 0% 0%;
+  /* Sidebar - Deep Navy Navigation */
+  --sidebar-background: 220 50% 20%; /* Deep navy sidebar */
+  --sidebar-foreground: 0 0% 100%;   /* White text */
+  --sidebar-primary: 45 100% 50%;    /* Gold active state */
+  --sidebar-primary-foreground: 220 40% 15%; /* Navy text on gold */
+  --sidebar-accent: 220 50% 25%;     /* Slightly lighter navy for hover */
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-border: 220 50% 30%;     /* Border within sidebar */
+  --sidebar-ring: 45 100% 50%;       /* Gold focus ring */
+
+  /* Shadow System for Depth */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
 .dark {
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
+  /* Dark mode: Deep navy background with lighter text */
+  --background: 220 50% 12%;         /* Very dark navy */
+  --foreground: 210 40% 95%;         /* Light gray text */
 
-  --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
+  --card: 220 50% 16%;               /* Slightly lighter navy for cards */
+  --card-foreground: 210 40% 95%;
 
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
+  --popover: 220 50% 16%;
+  --popover-foreground: 210 40% 95%;
 
-  --primary: 210 40% 98%;
-  --primary-foreground: 222.2 47.4% 11.2%;
+  --primary: 220 50% 25%;            /* Lighter navy for primary */
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
+  --secondary: 220 40% 20%;
+  --secondary-foreground: 210 40% 95%;
 
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
+  --muted: 220 35% 18%;
+  --muted-foreground: 210 20% 65%;
 
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
+  --accent: 45 100% 55%;             /* Bright gold in dark mode */
+  --accent-foreground: 220 50% 12%;
 
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
+  --gold-light: 45 100% 65%;
+  --gold-dark: 45 100% 45%;
 
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 212.7 26.8% 83.9%;
-  --sidebar-background: 240 5.9% 10%;
-  --sidebar-foreground: 240 4.8% 95.9%;
-  --sidebar-primary: 224.3 76.3% 48%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 240 3.7% 15.9%;
-  --sidebar-accent-foreground: 240 4.8% 95.9%;
-  --sidebar-border: 240 3.7% 15.9%;
-  --sidebar-ring: 217.2 91.2% 59.8%;
+  --destructive: 0 70% 50%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 220 35% 25%;
+  --input: 220 40% 20%;
+  --ring: 45 100% 55%;
+
+  --sidebar-background: 220 50% 10%;
+  --sidebar-foreground: 210 40% 95%;
+  --sidebar-primary: 45 100% 55%;
+  --sidebar-primary-foreground: 220 50% 12%;
+  --sidebar-accent: 220 50% 15%;
+  --sidebar-accent-foreground: 210 40% 95%;
+  --sidebar-border: 220 45% 18%;
+  --sidebar-ring: 45 100% 55%;
 }
 
 @theme {
@@ -168,30 +195,201 @@ All colors MUST be HSL.
   border-color: hsl(var(--border));
 }
 
+/* ============================================
+   TYPOGRAPHY SYSTEM
+   ============================================ */
+
+html {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
 body {
+  font-family: var(--font-primary);
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
   font-feature-settings: "rlig" 1, "calt" 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-/* Minimal, clean typography */
+/* Sophisticated Heading Hierarchy */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
+  font-family: var(--font-heading);
+  font-weight: 700;
   letter-spacing: -0.025em;
   color: hsl(var(--foreground));
+  line-height: 1.2;
+  margin-top: 0;
 }
 
-/* Clean button styles */
-button {
-  font-weight: 500;
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
 }
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.875rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.625rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraph and Text Elements */
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+a {
+  color: hsl(var(--primary));
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: hsl(var(--accent));
+}
+
+strong, b {
+  font-weight: 600;
+}
+
+em, i {
+  font-style: italic;
+}
+
+code {
+  font-family: 'Courier New', monospace;
+  font-size: 0.875em;
+  background: hsl(var(--muted));
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+}
+
+/* Button System */
+button {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* ============================================
+   FORM & INPUT SYSTEM
+   ============================================ */
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+input[type="date"],
+textarea,
+select {
+  font-family: var(--font-primary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--input));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 0.5rem 0.75rem;
+  transition: all 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: hsl(var(--ring));
+  box-shadow: 0 0 0 3px hsla(var(--ring) / 0.1);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: hsl(var(--muted-foreground));
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+  display: block;
+  margin-bottom: 0.375rem;
+}
+
+/* ============================================
+   COMPONENT DEFAULTS
+   ============================================ */
+
+/* Gold accent badge helper */
+.badge-gold {
+  background: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--gold-dark)) 100%);
+  color: hsl(var(--accent-foreground));
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+/* Status badge system */
+.status-active {
+  background: hsl(var(--success) / 0.1);
+  color: hsl(var(--success));
+  border: 1px solid hsl(var(--success) / 0.3);
+}
+
+.status-pending {
+  background: hsl(var(--warning) / 0.1);
+  color: hsl(var(--warning));
+  border: 1px solid hsl(var(--warning) / 0.3);
+}
+
+.status-inactive {
+  background: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+  border: 1px solid hsl(var(--border));
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
 
 /* Subtle shadows for depth */
 .shadow-sm {
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  box-shadow: var(--shadow-sm);
 }
 
 .shadow {
@@ -199,5 +397,26 @@ button {
 }
 
 .shadow-md {
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  box-shadow: var(--shadow-md);
+}
+
+.shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+.shadow-xl {
+  box-shadow: var(--shadow-xl);
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Gold gradient text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--gold-dark)) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
